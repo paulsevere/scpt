@@ -1,5 +1,5 @@
 {
-  "name": "scpt",
+  "name": "@paulsevere/scpt",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,6 +9,7 @@
     "find-root": "^1.1.0",
     "fs-extra-promise": "^1.0.1"
   },
+  "bin": { "scpt": "index.js" },
   "scripts": {
     "test": "jest",
     "start": "node index.js",
