@@ -16,7 +16,7 @@ const updateScripts = ({ name, script }, { exec, f }) => {
       console.log(`${blue(name)} ${red('already exists! Choose another name or rerun command with -f!')}`);
     }
     pkgObj.scripts[name] = script.includes('.js') ? `node ${script}` : script;
-    fs.writeFileSync(pkgJSON, JSON.stringify(pkgObj, null, 2));
+    fs.writeFileSync(pkgJSON, JSON.stringify(pkgObj, null, 2) + '\n');
   }
 };
 
