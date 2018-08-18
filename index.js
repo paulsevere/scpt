@@ -2,7 +2,7 @@
 
 const findRoot = require('find-root');
 const path = require('path');
-const fs = require('fs-extra-promise');
+const fs = require('fs');
 const { red, blue } = require('chalk');
 
 const updateScripts = ({ name, script }, { exec, f }) => {
