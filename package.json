@@ -11,5 +11,11 @@
   },
   "bin": {
     "scpt": "index.js"
-  }
+  },
+  "keywords": [
+    "package.json",
+    "utils",
+    "simple",
+    "scripts"
+  ]
 }

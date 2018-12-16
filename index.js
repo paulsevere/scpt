@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const { red, blue } = require('chalk');
 
-const updateScripts = ({ name, script }, { exec, f }) => {
+const updateScripts = ({ name, script }, { f }) => {
   const pkgJSON = path.resolve(findRoot(process.cwd()), 'package.json');
   if (fs.existsSync(pkgJSON)) {
     const pkgObj = fs.readJSONSync(pkgJSON);
@@ -22,11 +22,10 @@ const updateScripts = ({ name, script }, { exec, f }) => {
 
 const prog = require('caporal');
 prog
-  .version('1.0.0')
+  .version('1.3.0')
   .command('add', 'Add an npm script from the command line')
   .argument('<name>', 'Name of the script (eg. npm run <name>')
   .argument('<script>', 'A literal shell command or a path to an executable file')
-  .option('--exec', 'Inidicates that the file specified in the second argument should be run as an executable ')
   .option('-f', 'Overwrite existing scripts')
 
   .action(function(args, options, logger) {
